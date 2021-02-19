@@ -18,21 +18,115 @@
             <h2>Featured Shake</h2>
 
             <article>
+                <img src="https://picsum.photos/id/881/400/400" alt="">
+
+                <div>
+                    <h3>Lorem ipsum dolor.</h3>
+                    <h4>£6.99</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium autem ut soluta ex magni maiores labore, enim debitis amet cum alias aliquam deserunt, saepe magnam inventore similique qui explicabo obcaecati!</p>
+
+                    <span>
+                        4 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <span class="u-a11y">star rating</span>
+                    </span>
+
+                    <ul>
+                        <li>Suitable for vegans</li>
+                    </ul>
+
+                    <button id="milkshake-toggle-0" class="btn-faux" aria-expanded="false" aria-controls="milkshake-info-0">Ingredients</button>
+
+                    <div id="milkshake-info-0" aria-labelledby="milkshake-toggle-0">
+                        <ul>
+                            <li>Ingredient 1</li>
+                            <li>Ingredient 2</li>
+                            <li>Ingredient 3</li>
+                            <li>Ingredient 4</li>
+                            <li>Ingredient 5</li>
+                        </ul>
+                    </div>
+                </div>
             </article>
         </section>
         
         <section>
             <h2>Favourite Shakes</h2>
+
+            <ul>
+                <li>
+                    <article>
+                        <img src="https://picsum.photos/id/881/400/400" alt="">
+        
+                        <div>
+                            <h3>Lorem ipsum dolor.</h3>
+                            <h4>£6.99</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium autem ut soluta ex magni maiores labore, enim debitis amet cum alias aliquam deserunt, saepe magnam inventore similique qui explicabo obcaecati!</p>
+        
+                            <span>
+                                4 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <span class="u-a11y">star rating</span>
+                            </span>
+        
+                            <ul>
+                                <li>Suitable for vegans</li>
+                            </ul>
+        
+                            <button id="milkshake-toggle-0" class="btn-faux" aria-expanded="false" aria-controls="milkshake-info-0">Ingredients</button>
+        
+                            <div id="milkshake-info-0" aria-labelledby="milkshake-toggle-0">
+                                <ul>
+                                    <li>Ingredient 1</li>
+                                    <li>Ingredient 2</li>
+                                    <li>Ingredient 3</li>
+                                    <li>Ingredient 4</li>
+                                    <li>Ingredient 5</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+            </ul>
         </section>
 
-        <button id="add-to-cart" aria-controls="cart">
+        <button type="button" class="btn-faux js-cart-open" aria-expanded="false" aria-controls="cart">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 2L3 6v14c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3.8 6h16.4M16 10a4 4 0 1 1-8 0"/></svg>
-            <span class="u-a11y">Open the cart</span>
+            <span aria-live="polite">0</span>
+            <span class="u-a11y">Toggle the cart</span>
         </button>
     </main>
 
-    <aside>
+    <aside id="cart" class="js-cart" tabindex="-1">
         <h3>Your Cart</h3>
+
+        <ol>
+            <li>
+                <article>
+                    <img src="https://picsum.photos/id/881/200/200" alt="">
+
+                    <div>
+                        <h3>Lorem ipsum dolor.</h3>
+                        <h4>£6.99</h4>
+                        <ul>
+                            <li>Suitable for vegans</li>
+                        </ul>
+                        <div>
+                            <button type="button" class="js-qty-down">
+                                <span class="u-a11y">Decrease quantity by 1</span>
+                            </button>
+                            <input type="number" aria-label="quantity" name="product_qty" value="0">
+                            <button type="button" class="js-qty-down">
+                                <span class="u-a11y">Increase quantity by 1</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </li>
+        </ol>
+
+        <h5>Total: £6.99</h5>
+        <button>Checkout</button>
     </aside>
 
     <script src="dist/app.min.js"></script>

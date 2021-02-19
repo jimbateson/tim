@@ -1,0 +1,14 @@
+{
+    "milkshakes": [
+        {
+            "name": "Shyam",
+            "price": "6.99",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium autem ut soluta ex magni maiores labore, enim debitis amet cum alias aliquam deserunt, saepe magnam inventore similique qui explicabo obcaecati!",
+            "featured": true,
+            "specials": ["vegan"],
+            "image": "https://picsum.photos/id/881/400/400",
+            "ingredients": ["milk", "shake"],
+            "starRating": 4
+        }
+    ]
+}
