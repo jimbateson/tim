@@ -1,0 +1,18 @@
+:root {
+	--color-primary: #fa73f4;
+	--color-primary-light: #ffaafb;
+	--color-light: #fff;
+	--color-dark: #263147;
+	--color-grey: #ececec;
+	--color-grey-xlight: #f9f9f9;
+	--color-grey-light: #f7f7f7;
+	--flow-space: 1rem;
+	--font-body: Noto Sans, sans-serif;
+	--font-heading: Kavoon, cursive;
+	--radius: 40px;
+}
+
+$bp-sml-max: 767px;
+$bp-med: 768px;
+$bp-lg: 1024px;
+$bp-xlg: 1220px;

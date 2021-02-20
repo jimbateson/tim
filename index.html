@@ -6,38 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Incredible Milk</title>
 
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Kavoon&family=Noto+Sans&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/dist/style.css" />
 </head>
 <body>
-    <header>
+    <header class="site-head">
         <h1>The Incredible Milk</h1>
+
+		<button type="button" class="u-visible-small btn--faux cart-toggle js-cart-open" aria-expanded="false" aria-controls="cart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 2L3 6v14c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3.8 6h16.4M16 10a4 4 0 1 1-8 0"/></svg>
+            <span class="cart-toggle__count" aria-live="polite">0</span>
+            <span class="u-a11y">Toggle the cart</span>
+        </button>
     </header>
 
-    <main>
+    <main class="site-main">
         <section>
-            <h2>Featured Shake</h2>
+            <h2 class="section-heading">Featured Shake</h2>
 
-            <article>
-                <img src="https://picsum.photos/id/881/400/400" alt="">
+            <article class="shake shake--featured">
+                <img src="/dist/img/shake-featured.png" alt="">
 
-                <div>
-                    <h3>Lorem ipsum dolor.</h3>
-                    <h4>£6.99</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium autem ut soluta ex magni maiores labore, enim debitis amet cum alias aliquam deserunt, saepe magnam inventore similique qui explicabo obcaecati!</p>
+                <div class="shake-content u-flow-vert">
+					<div class="shake-content__top">
+						<hgroup>
+							<h3 class="shake-content__heading">Lorem ipsum dolor</h3>
+							<h4 class="shake-content__price">£6.99</h4>
+						</hgroup>
 
-                    <span>
-                        4 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        <span class="u-a11y">star rating</span>
-                    </span>
+						<span class="shake-content__rating">
+							4
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+							<span class="u-a11y">star rating</span>
+						</span>
+					</div>
 
-                    <ul>
-                        <li>Suitable for vegans</li>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                    <ul class="u-list-reset shake-content__features">
+                        <li>Vegan friendly</li>
                     </ul>
 
-                    <button id="milkshake-toggle-0" class="btn-faux" aria-expanded="false" aria-controls="milkshake-info-0">Ingredients</button>
+					<div class="shake-content__bottom">
+						<button id="milkshake-toggle-0" class="btn--faux btn--toggle" aria-expanded="false" aria-controls="milkshake-info-0">
+							Details
+							<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
+						</button>
 
-                    <div id="milkshake-info-0" aria-labelledby="milkshake-toggle-0">
+						<button class="btn--faux btn--add js-btn-add">
+							<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            <span class="u-a11y">Add to cart</span>
+						</button>
+					</div>
+
+                    <div id="milkshake-info-0" class="shake-content__ingredients" aria-labelledby="milkshake-toggle-0">
+						<h5>Ingredients</h5>
                         <ul>
                             <li>Ingredient 1</li>
                             <li>Ingredient 2</li>
@@ -49,84 +74,238 @@
                 </div>
             </article>
         </section>
-        
-        <section>
-            <h2>Favourite Shakes</h2>
 
-            <ul>
+        <section>
+            <h2 class="section-heading">Favourite Shakes</h2>
+
+            <ul class="u-list-reset shakes-grid">
                 <li>
-                    <article>
-                        <img src="https://picsum.photos/id/881/400/400" alt="">
-        
-                        <div>
-                            <h3>Lorem ipsum dolor.</h3>
-                            <h4>£6.99</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium autem ut soluta ex magni maiores labore, enim debitis amet cum alias aliquam deserunt, saepe magnam inventore similique qui explicabo obcaecati!</p>
-        
-                            <span>
-                                4 
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                <span class="u-a11y">star rating</span>
-                            </span>
-        
-                            <ul>
-                                <li>Suitable for vegans</li>
-                            </ul>
-        
-                            <button id="milkshake-toggle-0" class="btn-faux" aria-expanded="false" aria-controls="milkshake-info-0">Ingredients</button>
-        
-                            <div id="milkshake-info-0" aria-labelledby="milkshake-toggle-0">
-                                <ul>
-                                    <li>Ingredient 1</li>
-                                    <li>Ingredient 2</li>
-                                    <li>Ingredient 3</li>
-                                    <li>Ingredient 4</li>
-                                    <li>Ingredient 5</li>
-                                </ul>
-                            </div>
+                    <article class="shake">
+                        <img src="/dist/img/shake-1.png" alt="">
+
+                        <div class="shake-content u-flow-vert">
+							<div class="shake-content__top">
+								<hgroup>
+									<h3 class="share-content__heading">Lorem ipsum dolor</h3>
+									<h4 class="shake-content__price">£6.99</h4>
+								</hgroup>
+
+								<span class="shake-content__rating">
+									4
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+									<span class="u-a11y">star rating</span>
+								</span>
+							</div>
+
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                            <div class="shake-content__bottom">
+								<button id="milkshake-toggle-0" class="btn--faux btn--toggle" aria-expanded="false" aria-controls="milkshake-info-0">
+									Details
+									<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
+								</button>
+
+								<button class="btn--faux btn--add js-btn-add">
+									<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+									<span class="u-a11y">Add to cart</span>
+								</button>
+							</div>
+
+							<div id="milkshake-info-0" class="shake-content__ingredients" aria-labelledby="milkshake-toggle-0">
+								<h5>Ingredients</h5>
+								<ul class="u-list-reset">
+									<li>Ingredient 1</li>
+									<li>Ingredient 2</li>
+									<li>Ingredient 3</li>
+									<li>Ingredient 4</li>
+									<li>Ingredient 5</li>
+								</ul>
+							</div>
+                        </div>
+                    </article>
+                </li>
+
+				<li>
+                    <article class="shake">
+                        <img src="/dist/img/shake-1.png" alt="">
+
+                        <div class="shake-content u-flow-vert">
+							<div class="shake-content__top">
+								<hgroup>
+									<h3 class="share-content__heading">Lorem ipsum dolor</h3>
+									<h4 class="shake-content__price">£6.99</h4>
+								</hgroup>
+
+								<span class="shake-content__rating">
+									4
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+									<span class="u-a11y">star rating</span>
+								</span>
+							</div>
+
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                            <div class="shake-content__bottom">
+								<button id="milkshake-toggle-0" class="btn--faux btn--toggle" aria-expanded="false" aria-controls="milkshake-info-0">
+									Details
+									<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
+								</button>
+
+								<button class="btn--faux btn--add js-btn-add">
+									<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+									<span class="u-a11y">Add to cart</span>
+								</button>
+							</div>
+
+							<div id="milkshake-info-0" class="shake-content__ingredients" aria-labelledby="milkshake-toggle-0">
+								<h5>Ingredients</h5>
+								<ul class="u-list-reset">
+									<li>Ingredient 1</li>
+									<li>Ingredient 2</li>
+									<li>Ingredient 3</li>
+									<li>Ingredient 4</li>
+									<li>Ingredient 5</li>
+								</ul>
+							</div>
+                        </div>
+                    </article>
+                </li>
+
+				<li>
+                    <article class="shake">
+                        <img src="/dist/img/shake-1.png" alt="">
+
+                        <div class="shake-content u-flow-vert">
+							<div class="shake-content__top">
+								<hgroup>
+									<h3 class="share-content__heading">Lorem ipsum dolor</h3>
+									<h4 class="shake-content__price">£6.99</h4>
+								</hgroup>
+
+								<span class="shake-content__rating">
+									4
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+									<span class="u-a11y">star rating</span>
+								</span>
+							</div>
+
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                            <div class="shake-content__bottom">
+								<button id="milkshake-toggle-0" class="btn--faux btn--toggle" aria-expanded="false" aria-controls="milkshake-info-0">
+									Details
+									<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
+								</button>
+
+								<button class="btn--faux btn--add js-btn-add">
+									<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+									<span class="u-a11y">Add to cart</span>
+								</button>
+							</div>
+
+							<div id="milkshake-info-0" class="shake-content__ingredients" aria-labelledby="milkshake-toggle-0">
+								<h5>Ingredients</h5>
+								<ul class="u-list-reset">
+									<li>Ingredient 1</li>
+									<li>Ingredient 2</li>
+									<li>Ingredient 3</li>
+									<li>Ingredient 4</li>
+									<li>Ingredient 5</li>
+								</ul>
+							</div>
+                        </div>
+                    </article>
+                </li>
+
+				<li>
+                    <article class="shake">
+                        <img src="/dist/img/shake-1.png" alt="">
+
+                        <div class="shake-content u-flow-vert">
+							<div class="shake-content__top">
+								<hgroup>
+									<h3 class="share-content__heading">Lorem ipsum dolor</h3>
+									<h4 class="shake-content__price">£6.99</h4>
+								</hgroup>
+
+								<span class="shake-content__rating">
+									4
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+									<span class="u-a11y">star rating</span>
+								</span>
+							</div>
+
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                            <div class="shake-content__bottom">
+								<button id="milkshake-toggle-0" class="btn--faux btn--toggle" aria-expanded="false" aria-controls="milkshake-info-0">
+									Details
+									<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
+								</button>
+
+								<button class="btn--faux btn--add js-btn-add">
+									<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+									<span class="u-a11y">Add to cart</span>
+								</button>
+							</div>
+
+							<div id="milkshake-info-0" class="shake-content__ingredients" aria-labelledby="milkshake-toggle-0">
+								<h5>Ingredients</h5>
+								<ul class="u-list-reset">
+									<li>Ingredient 1</li>
+									<li>Ingredient 2</li>
+									<li>Ingredient 3</li>
+									<li>Ingredient 4</li>
+									<li>Ingredient 5</li>
+								</ul>
+							</div>
                         </div>
                     </article>
                 </li>
             </ul>
         </section>
-
-        <button type="button" class="btn-faux js-cart-open" aria-expanded="false" aria-controls="cart">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 2L3 6v14c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3.8 6h16.4M16 10a4 4 0 1 1-8 0"/></svg>
-            <span aria-live="polite">0</span>
-            <span class="u-a11y">Toggle the cart</span>
-        </button>
     </main>
 
-    <aside id="cart" class="js-cart" tabindex="-1">
-        <h3>Your Cart</h3>
+    <aside id="cart" class="cart js-cart" tabindex="-1">
+		<div>
+			<h2>Your Cart</h2>
 
-        <ol>
-            <li>
-                <article>
-                    <img src="https://picsum.photos/id/881/200/200" alt="">
+			<ol class="u-list-reset u-flow-vert">
+				<li>
+					<article class="shake shake--cart">
+						<img src="/dist/img/shake-1.png" alt="">
 
-                    <div>
-                        <h3>Lorem ipsum dolor.</h3>
-                        <h4>£6.99</h4>
-                        <ul>
-                            <li>Suitable for vegans</li>
-                        </ul>
-                        <div>
-                            <button type="button" class="js-qty-down">
-                                <span class="u-a11y">Decrease quantity by 1</span>
-                            </button>
-                            <input type="number" aria-label="quantity" name="product_qty" value="0">
-                            <button type="button" class="js-qty-down">
-                                <span class="u-a11y">Increase quantity by 1</span>
-                            </button>
-                        </div>
-                    </div>
-                </article>
-            </li>
-        </ol>
+						<div class="u-flow-vert shake-content">
+							<div class="shake-content__top">
+								<hgroup>
+									<h3 class="shake-content__heading">Lorem ipsum dolor</h3>
+									<h4 class="shake-content__price">£6.99</h4>
+								</hgroup>
+							</div>
 
-        <h5>Total: £6.99</h5>
-        <button>Checkout</button>
+							<ul class="u-list-reset shake-content__features">
+								<li>Vegan friendly</li>
+							</ul>
+
+							<div class="u-flow-horiz shake-content__quantity">
+								<button type="button" class="btn--faux btn--qty js-qty-down">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+									<span class="u-a11y">Decrease quantity by 1</span>
+								</button>
+								<input type="number" min="1" max="5" aria-label="quantity" name="product_qty" value="1">
+								<button type="button" class="btn--faux btn--qty js-qty-up">
+									<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+									<span class="u-a11y">Increase quantity by 1</span>
+								</button>
+							</div>
+						</div>
+					</article>
+				</li>
+			</ol>
+
+			<h5 class="cart__total">Total: £6.99</h5>
+			<button class="btn--faux btn--submit">Checkout</button>
+		</div>
     </aside>
 
     <script src="dist/app.min.js"></script>

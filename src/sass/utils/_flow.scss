@@ -1,0 +1,11 @@
+.u-flow-vert {
+	> * + * {
+		margin-top: var(--flow-space);
+	}
+}
+
+.u-flow-horiz {
+	> * + * {
+		margin-left: var(--flow-space);
+	}
+}

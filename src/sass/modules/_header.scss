@@ -1,0 +1,23 @@
+.site-head {
+	background: url(img/i-like-food.svg), var(--color-primary);
+	background-size: 120px;
+	padding: var(--flow-space) 1.5rem 100px;
+	text-align: center;
+
+	h1 {
+		font-size: 2.5rem;
+		margin-bottom: var(--flow-space);
+	}
+}
+
+@media screen and (min-width: $bp-lg) {
+	.site-head {
+		align-items: center;
+		border-top-right-radius: var(--radius);
+		display: flex;
+
+		h1 {
+			margin: 0;
+		}
+	}
+}

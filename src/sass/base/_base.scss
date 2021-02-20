@@ -1,0 +1,14 @@
+html {
+	font-family: var(--font-body);
+	overflow-x: hidden;
+	position: relative;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: var(--color-dark);
+	font-family: var(--font-heading);
+	line-height: 1.2;
+}

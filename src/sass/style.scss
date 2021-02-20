@@ -1,3 +1,13 @@
-@import 'base/reset';
+@import
+	'base/reset',
+	'base/variables',
+	'base/base',
 
-@import 'utils/utils';
+	'elements/buttons',
+
+	'modules/cart',
+	'modules/header',
+	'modules/main',
+	'modules/shake',
+
+	'utils/utils';

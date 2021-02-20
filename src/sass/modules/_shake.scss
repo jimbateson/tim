@@ -1,0 +1,128 @@
+.shakes-grid {
+	display: grid;
+	gap: var(--flow-space);
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.shake {
+	--radius: 20px;
+	border-radius: var(--radius);
+	box-shadow: 11px 10px 0 -3px var(--color-grey);
+	overflow: hidden;
+
+	&:not(.shake--featured) {
+		display: flex;
+
+		img {
+			max-width: 100px;
+		}
+
+		p {
+			font-size: .85rem;
+		}
+	}
+
+	// .shake--featured
+	&--featured {
+		.shake-content__heading {
+			font-size: 1.5rem;
+		}
+	}
+
+	img {
+		object-fit: cover;
+	}
+}
+
+.shake-content {
+	background-color: var(--color-grey-xlight);
+	padding: var(--flow-space);
+}
+
+.shake-content__top,
+.shake-content__bottom {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+.shake-content__price {
+	color: var(--color-primary);
+	font-size: .85rem;
+}
+
+.shake-content__rating {
+	align-items: center;
+	display: flex;
+	float: right;
+	font-size: 1.3rem;
+
+	svg {
+		fill: var(--color-primary);
+	}
+}
+
+.shake-content__features {
+	li {
+		align-items: center;
+		display: flex;
+		font-size: .85rem;
+
+		&:before {
+			background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E"), var(--color-primary);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 10px;
+			border-radius: 50%;
+			color: var(--color-light);
+			content: '';
+			display: inline-block;
+			height: 12px;
+			margin-right: 5px;
+			width: 12px;
+		}
+	}
+}
+
+.shake-content__ingredients {
+	background-color: var(--color-grey-light);
+	display: none;
+	margin: var(--flow-space) -1rem -1rem;
+	padding: var(--flow-space);
+}
+
+.shake-content__quantity {
+	align-items: center;
+	background-color: var(--color-grey-light);
+	border-radius: 44px;
+	display: flex;
+	font-size: 1.2rem;
+	justify-content: space-between;
+	padding: 5px;
+
+	> * {
+		flex-grow: 0;
+		flex-shrink: 1;
+	}
+
+	input {
+		background-color: transparent;
+		border: 0;
+		max-width: 30px;
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: $bp-lg) {
+	.shakes-grid {
+		gap: 30px;
+	}
+
+	.shake--featured {
+		display: flex;
+
+		img {
+			max-width: 250px;
+		}
+	}
+}

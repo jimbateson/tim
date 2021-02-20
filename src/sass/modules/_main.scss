@@ -1,0 +1,35 @@
+.site-main {
+	background-color: var(--color-light);
+	border-top-left-radius: var(--radius);
+	border-top-right-radius: var(--radius);
+	color: var(--color-dark);
+	padding: 20px 20px 0;
+
+	section + section {
+		margin-top: 3rem;
+	}
+}
+
+.section-heading {
+	color: var(--color-dark);
+	font-size: 1.8rem;
+	margin-bottom: var(--flow-space);
+}
+
+@media screen and (max-width: $bp-sml-max) {
+	.site-main {
+		transform: translateY(-40px);
+	}
+}
+
+@media screen and (min-width: $bp-lg) {
+	body {
+		column-gap: var(--flow-space);
+		display: grid;
+		grid-template-columns: 350px 1fr 350px;
+	}
+
+	.section-heading {
+		font-size: 2.3rem;
+	}
+}
