@@ -1,5 +1,6 @@
 .site-head {
-	background: url(img/i-like-food.svg), var(--color-primary);
+	background-color: var(--color-primary-light);
+	background-image: url(img/i-like-food.svg);
 	background-size: 120px;
 	padding: var(--flow-space) 1.5rem 100px;
 	text-align: center;

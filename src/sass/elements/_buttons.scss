@@ -6,7 +6,6 @@
 
 	&:hover,
 	&:focus {
-		color: var(--color-primary);
 		text-decoration: none;
 	}
 
@@ -21,10 +20,17 @@
 	font-size: .85rem;
 	text-decoration: underline var(--color-primary) 2px;
 
+	&[aria-expanded='true'] {
+		svg {
+			transform: rotate(180deg);
+		}
+	}
+
 	svg {
 		fill: none;
 		stroke: var(--color-dark);
 		stroke-width: 2;
+		transition: transform .3s;
 	}
 }
 
@@ -35,6 +41,7 @@
 	display: flex;
 	height: 44px;
 	justify-content: center;
+	transition: background-color .3s;
 	width: 44px;
 
 	&:hover,
@@ -51,26 +58,31 @@
 .btn--submit {
 	background-color: var(--color-primary);
 	border-bottom-left-radius: var(--radius);
-	color: var(--color-light);
+	color: var(--color-dark);
 	font-family: var(--font-heading);
 	font-size: 1.3rem;
-	margin: var(--flow-space) -1rem -1rem;
-	padding-block: var(--flow-space);
+	margin: 0 -1rem -1rem;
+	padding-bottom: var(--flow-space);
+	padding-top: var(--flow-space);
+	transition: background-color .3s, color .3s;
 	width: calc(100% + 2rem);
 
 	&:hover,
 	&:focus {
 		background-color: var(--color-dark);
+		color: var(--color-light);
 	}
 }
 
-.btn--add {
+.btn--add,
+.btn--cart {
 	align-items: center;
 	background-color: var(--color-dark);
 	border-radius: 50%;
 	display: flex;
 	height: 44px;
 	justify-content: center;
+	transition: background-color .3s;
 	width: 44px;
 
 	svg {
@@ -80,12 +92,18 @@
 
 	&:hover,
 	&:focus {
-		animation: pulse 1.1s;
 		background-color: var(--color-primary);
 
 		svg {
 			stroke: var(--color-dark);
 		}
+	}
+}
+
+.btn--add {
+	&:hover,
+	&:focus {
+		animation: pulse 1.1s;
 	}
 }
 

@@ -1,12 +1,55 @@
 {
     "milkshakes": [
         {
-            "name": "Shyam",
+            "name": "Featured Shake",
             "price": "6.99",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium autem ut soluta ex magni maiores labore, enim debitis amet cum alias aliquam deserunt, saepe magnam inventore similique qui explicabo obcaecati!",
             "featured": true,
             "specials": ["vegan"],
-            "image": "https://picsum.photos/id/881/400/400",
+            "image": "/dist/img/shake-featured.png",
+            "ingredients": ["milk", "shake"],
+            "starRating": 4
+        },
+		{
+            "name": "Shake 1",
+            "price": "6.99",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium autem ut soluta ex magni maiores labore, enim debitis amet cum alias aliquam deserunt, saepe magnam inventore similique qui explicabo obcaecati!",
+            "featured": false,
+            "specials": ["vegan"],
+            "image": "/dist/img/shake-1.png",
+            "ingredients": ["milk", "shake"],
+            "starRating": 4
+        }
+		,
+		{
+            "name": "Shake 2",
+            "price": "6.99",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium autem ut soluta ex magni maiores labore, enim debitis amet cum alias aliquam deserunt, saepe magnam inventore similique qui explicabo obcaecati!",
+            "featured": false,
+            "specials": ["vegan"],
+            "image": "/dist/img/shake-1.png",
+            "ingredients": ["milk", "shake"],
+            "starRating": 4
+        }
+		,
+		{
+            "name": "Shake 3",
+            "price": "6.99",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium autem ut soluta ex magni maiores labore, enim debitis amet cum alias aliquam deserunt, saepe magnam inventore similique qui explicabo obcaecati!",
+            "featured": false,
+            "specials": ["vegan"],
+            "image": "/dist/img/shake-1.png",
+            "ingredients": ["milk", "shake"],
+            "starRating": 4
+        }
+		,
+		{
+            "name": "Shake 4",
+            "price": "6.99",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium autem ut soluta ex magni maiores labore, enim debitis amet cum alias aliquam deserunt, saepe magnam inventore similique qui explicabo obcaecati!",
+            "featured": false,
+            "specials": ["vegan"],
+            "image": "/dist/img/shake-1.png",
             "ingredients": ["milk", "shake"],
             "starRating": 4
         }
