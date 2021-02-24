@@ -25,6 +25,10 @@
 
 	// .shake--featured
 	&--featured {
+		img {
+			width: 100%;
+		}
+
 		.shake-content__heading {
 			font-size: 1.5rem;
 		}

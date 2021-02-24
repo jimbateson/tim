@@ -54,30 +54,6 @@ module.exports = {
 		"space-infix-ops": "error",
 		"space-unary-ops": "error",
 		"spaced-comment": "error",
-		"template-curly-spacing": "error",
-		"jsdoc/check-alignment": 1, // Recommended
-		"jsdoc/check-indentation": 1,
-		"jsdoc/check-param-names": 1, // Recommended
-		"jsdoc/check-syntax": 1,
-		//"jsdoc/check-tag-names": 1, // Commented out to stop throwing warnings on our Category tags (these are custom)
-		"jsdoc/check-types": 1, // Recommended
-		"jsdoc/implements-on-classes": 1, // Recommended
-		"jsdoc/match-description": 1,
-		"jsdoc/newline-after-description": 1, // Recommended
-		"jsdoc/no-undefined-types": 1, // Recommended
-		"jsdoc/require-description": 1,
-		"jsdoc/require-description-complete-sentence": 1,
-		"jsdoc/require-example": 0,
-		"jsdoc/require-hyphen-before-param-description": 0,
-		"jsdoc/require-jsdoc": 1, // Recommended
-		"jsdoc/require-param": 1, // Recommended
-		"jsdoc/require-param-description": 1, // Recommended
-		"jsdoc/require-param-name": 1, // Recommended
-		"jsdoc/require-param-type": 1, // Recommended
-		"jsdoc/require-returns": 1, // Recommended
-		"jsdoc/require-returns-check": 1, // Recommended
-		"jsdoc/require-returns-description": 1, // Recommended
-		"jsdoc/require-returns-type": 1, // Recommended
-		"jsdoc/valid-types": 1 // Recommended
+		"template-curly-spacing": "error"
 	}
 };
