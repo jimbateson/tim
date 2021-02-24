@@ -44,15 +44,14 @@
 @media screen and (max-width: $bp-sml-max) {
 	.cart {
 		min-width: 300px;
-		overflow-x: hidden;
 		position: fixed;
 		right: 0;
 		top: 0;
 		transform: translateX(100%);
 		transition: box-shadow .3s, transform .3s;
 
-		// .cart-open
-		&-open {
+		// .cart--open
+		&--open {
 			box-shadow: 0 10px 39px 10px rgba(62, 66, 66, .5);
 			transform: translateX(0);
 		}
@@ -63,14 +62,14 @@
 	.cart {
 		background: var(--color-grey-xlight);
 		max-height: 100vh;
+		position: sticky;
+		top: 0;
 	}
 
 	.cart__wrap {
 		display: flex;
 		flex-direction: column;
 		height: 100%;
-		position: sticky;
-		top: var(--flow-space);
 	}
 
 	.cart__bottom {

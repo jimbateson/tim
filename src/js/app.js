@@ -1,26 +1,4 @@
-
 // Toggles and such
-
-// TODO: Secure way to do this, if for example a nasty script came from the
-// API, it would be added. Just testing with this.
-async function getData() {
-	fetch('/data/shakes.json')
-		.then(response => response.json())
-		.then(data => {
-			const markup =
-				`<ul class="u-list-reset shakes-grid js-shakes-grid">
-					${data.milkshakes.map(shake =>
-						`<li>
-							<article>
-								* ${shake.name} is ${shake.price}
-							</article>
-						</li>`
-					)}
-				</ul>`
-
-			// console.log(markup);
-		});
-};
 
 function toggleCart() {
 	const objOpen = document.querySelector('.js-open-cart');
@@ -29,12 +7,12 @@ function toggleCart() {
 
 	objOpen.addEventListener('click', (e) => {
 		e.currentTarget.setAttribute('aria-expanded', true);
-		objCart.classList.add('cart-open');
+		objCart.classList.add('cart--open');
 		objClose.focus();
 	});
 
 	objClose.addEventListener('click', () => {
-		objCart.classList.remove('cart-open');
+		objCart.classList.remove('cart--open');
 		objOpen.setAttribute('aria-expanded', false);
 		objOpen.focus();
 	});
@@ -55,7 +33,6 @@ function toggleDetails() {
 	})
 }
 
-getData();
 toggleCart();
 toggleDetails();
 
