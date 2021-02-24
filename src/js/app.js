@@ -93,7 +93,10 @@ function handleCart() {
 
 		cartItem.innerHTML =
 			`<article class="shake shake--cart">
-				<img src="${objShake.image}" alt="" loading="lazy" width="200" height="215">
+				<picture>
+					<source srcset="${objShake.image}" type="image/webp">
+					<img src="${objShake.image}" alt="" width="200" height="215" loading="lazy">
+				</picture>
 
 				<div class="u-flow-vert shake-content">
 					<div class="shake-content__top">
