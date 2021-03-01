@@ -136,7 +136,7 @@
 	}
 }
 
-@media screen and (min-width: $bp-lg) {
+@media screen and (min-width: $bp-xlg) {
 	.shakes-grid {
 		gap: 30px;
 	}
@@ -146,6 +146,10 @@
 
 		img {
 			max-width: 250px;
+		}
+
+		.shake-content {
+			flex: 1;
 		}
 	}
 }
