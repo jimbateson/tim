@@ -85,9 +85,16 @@
         <section>
             <h2 class="section-heading">Favourite Shakes</h2>
 
+			<label for="filter-shakes">Filter</label>
+			<select id="filter-shakes" class="js-filter-shakes">
+				<option selected value="">All shakes</option>
+				<option>Vegan</option>
+				<option>Chocolate</option>
+			</select>
+
 			<ul class="u-list-reset shakes-grid">
 				<li>
-                    <article class="shake">
+                    <article class="shake" data-tag="vegan">
 						<picture>
 							<source srcset="/dist/img/shake-1.webp" type="image/webp">
 							<img src="/dist/img/shake-1.png" alt="" width="250" height="250" loading="lazy">
@@ -132,7 +139,7 @@
                 </li>
 
 				<li>
-                    <article class="shake">
+                    <article class="shake" data-tag="chocolate">
                         <picture>
 							<source srcset="/dist/img/shake-2.webp" type="image/webp">
 							<img src="/dist/img/shake-2.png" alt="" width="250" height="250" loading="lazy">
@@ -192,7 +199,7 @@
 			<ol class="u-list-reset u-flow-vert js-cart-items"></ol>
 
 			<footer class="cart__bottom">
-				<h5 class="cart__total">Total: £0.00</h5>
+				<h5 class="cart__total">Total: <span class="test">£0.00</span></h5>
 				<button class="btn--faux btn--submit">Checkout</button>
 			</footer>
 		</section>

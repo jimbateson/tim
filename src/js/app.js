@@ -108,3 +108,25 @@ function removeFromCart(e) {
 		e.target.parentElement.parentElement.remove();
 	}
 }
+
+function filtershakes() {
+	const filter = document.querySelector('.js-filter-shakes');
+	const shakes = document.querySelector('.shakes-grid');
+	const shake = shakes.querySelectorAll('.shake');
+
+	filter.addEventListener('change', () => {
+		const value = filter.value;
+
+		Array.from(shake).forEach(shakeItem => {
+			const tag = shakeItem.dataset.tag;
+
+			if(value.toLowerCase() === tag || value === '') {
+				shakeItem.classList.remove('hidden');
+			} else {
+				shakeItem.classList.add('hidden');
+			}
+		});
+	});
+}
+
+filtershakes();
