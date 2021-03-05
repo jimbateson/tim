@@ -46,10 +46,12 @@ function loadEventListeners() {
 }
 
 function handleCart() {
-	const objAdd = document.querySelector('.js-cart-add');
+	const objAdd = document.querySelectorAll('.js-cart-add');
 	const objItems = document.querySelector('.js-cart-items');
 
-	objAdd.addEventListener('click', buyShake);
+	objAdd.forEach(objButton => {
+		objButton.addEventListener('click', buyShake);
+	})
 
 	function buyShake(e) {
 		const objShake = e.currentTarget.parentElement.parentElement;
